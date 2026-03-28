@@ -489,7 +489,7 @@ const featuredProducts = [
       'Recurso web que organiza los criterios 2027, los dos itinerarios de la monografía, orientaciones para Matemáticas, marcos del itinerario interdisciplinario, banco de ejemplos, caso de práctica y herramienta de revisión formativa de borradores.',
     value:
       'Profundidad académica real y gran utilidad práctica para supervisores y docentes IB que acompañan el proceso de investigación.',
-    url: 'https://laolibero.com/landing_monografia_ib_2027#criterios',
+    url: 'https://monografia.astridto.com#criterios',
   },
 ]
 
