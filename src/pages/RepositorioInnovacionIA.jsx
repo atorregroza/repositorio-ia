@@ -452,7 +452,7 @@ const featuredProducts = [
       'Landing del taller diseñada para el IDM 2026. Presenta una narrativa visual sobre tres capacidades matemáticas fundamentales y su relación con el tema "Las matemáticas y la esperanza", con acceso a presentaciones y secciones conceptuales.',
     value:
       'No solo comunica una charla: organiza una entrada conceptual atractiva a ideas matemáticas profundas, conectando matemáticas y esperanza.',
-    url: 'https://laolibero.com/las-matematicas-y-la-esperanza',
+    url: 'https://los3superpoderes.astridto.com',
   },
   {
     id: 'fp2',
@@ -470,7 +470,7 @@ const featuredProducts = [
       'Producto digital orientado a docentes de Tecnología e Informática para planear con mayor intención pedagógica, integrar materiales, estructurar actividades y fortalecer el trabajo docente con ayuda de IA.',
     value:
       'Propuesta de valor clara, público definido y aplicación directa en el trabajo real de aula. Herramienta de asistencia pedagógica lista para usar.',
-    url: 'https://laolibero.com/kit-docente?sid=b51cf6a7',
+    url: 'https://copiloto.astridto.com',
   },
   {
     id: 'fp3',
