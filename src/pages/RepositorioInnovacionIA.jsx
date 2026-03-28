@@ -683,10 +683,21 @@ function LineCard({ name, config, count, onClick }) {
 
 // ─── Resource card ─────────────────────────────────────────────────────────────
 
+function getTypeStyle(type) {
+  if (type?.includes('GPT')) return { bg: '#f0fdf4', color: '#166534' }
+  if (type?.includes('App')) return { bg: '#eff6ff', color: '#1d4ed8' }
+  if (type?.includes('Taller')) return { bg: '#fef9c3', color: '#854d0e' }
+  if (type?.includes('Centro')) return { bg: '#fdf4ff', color: '#7e22ce' }
+  if (type?.includes('Tutoría')) return { bg: '#fff7ed', color: '#9a3412' }
+  if (type?.includes('Presentación')) return { bg: '#f1f5f9', color: '#334155' }
+  return { bg: '#f8fafc', color: '#475569' }
+}
+
 function ResourceCard({ resource, isSelected, onClick }) {
   const conf = getLineConf(resource.line)
   const toolVis = getToolVisual(resource.tool)
   const ToolIcon = toolVis.icon
+  const ts = getTypeStyle(resource.type)
 
   return (
     <motion.button
