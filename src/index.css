@@ -87,7 +87,6 @@ body {
 .portfolio-wrapper h2 {
   font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
 }
 
 .portfolio-wrapper h1 {

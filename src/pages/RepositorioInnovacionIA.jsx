@@ -1596,8 +1596,8 @@ export function RepositorioInnovacionIA() {
                     </span>
 
                     <h2
-                      className="mt-3 text-2xl font-bold text-white sm:text-3xl"
-                      style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                      className="mt-3 text-2xl font-bold sm:text-3xl"
+                      style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#FFFFFF' }}
                     >
                   Tecnología e IA como{' '}
                       <span style={{ color: '#F0A020' }}>lenguaje pedagógico</span>
