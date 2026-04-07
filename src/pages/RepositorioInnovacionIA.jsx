@@ -24,6 +24,7 @@ import {
   Rocket,
   BookMarked,
   Cpu,
+  MessageCircle,
 } from 'lucide-react'
 import astridPhoto from '../assets/images/hero-astrid.png'
 
@@ -225,6 +226,7 @@ const resources = [
     title: 'Ponencias 13EJM – revisado',
     type: 'GPT especializado',
     line: 'GPTs y asistentes',
+    contactOnly: true,
     subline: 'Eventos académicos',
     audience: 'Docentes revisores y comité organizador',
     tool: 'ChatGPT GPT personalizado',
@@ -438,6 +440,7 @@ const featuredProducts = [
   {
     id: 'fp1',
     title: 'Los 3 superpoderes de las matemáticas',
+    contactOnly: true,
     badge: 'Experiencia web educativa',
     badgeColor: '#FFFFFF',
     badgeBg: 'rgba(255,255,255,0.18)',
@@ -475,6 +478,7 @@ const featuredProducts = [
   {
     id: 'fp3',
     title: 'Guía de Supervisión y Evaluación Formativa · Monografía IB en Matemáticas (Marco 2027)',
+    contactOnly: true,
     badge: 'Herramienta académica premium',
     badgeColor: '#FFFFFF',
     badgeBg: 'rgba(255,255,255,0.15)',
@@ -772,6 +776,14 @@ function ResourceCard({ resource, isSelected, onClick }) {
           </p>
 
           <div className="mt-3 flex flex-wrap gap-1.5">
+            {resource.contactOnly && (
+              <span
+                className="rounded-full px-2.5 py-0.5 text-xs font-bold"
+                style={{ background: '#25D366', color: '#FFFFFF' }}
+              >
+                Solo por contacto
+              </span>
+            )}
             {resource.tags.slice(0, 3).map((tag) => (
               <span
                 key={tag}
@@ -914,43 +926,74 @@ function DetailPanel({ resource, onClose }) {
             </div>
           </div>
 
-          <div
-            className="flex items-center gap-3 rounded-2xl border p-3"
-            style={{ borderColor: conf.accent + '25', background: conf.accent + '08' }}
-          >
-            <div
-              className="shrink-0 rounded-xl p-2"
-              style={{ background: conf.accent + '18' }}
-            >
-              <LinkIcon className="h-3.5 w-3.5" style={{ color: conf.accent }} />
-            </div>
-            <div className="min-w-0 flex-1">
-              <p className="text-xs font-semibold text-slate-800">Enlace</p>
-              <a
-                href={resource.url}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-0.5 block truncate text-xs font-medium hover:underline"
-                style={{ color: conf.accent }}
+          {resource.contactOnly ? (
+            <>
+              <div
+                className="flex items-center gap-3 rounded-2xl border p-3"
+                style={{ borderColor: '#25D366' + '30', background: '#25D366' + '0a' }}
               >
-                {resource.url}
-              </a>
-            </div>
-          </div>
-
-          {/* CTA button — functional with window.open */}
-          <button
-            onClick={() => window.open(resource.url, '_blank', 'noreferrer')}
-            className="flex w-full items-center justify-center gap-2 rounded-2xl px-5 py-3.5 text-sm font-bold shadow-md transition-all duration-200 hover:opacity-90 hover:shadow-lg active:scale-[0.98]"
-            style={{
-              background: 'linear-gradient(135deg, #E8941A 0%, #B8720C 100%)',
-              color: 'white',
-            }}
-          >
-            <Star className="h-4 w-4" />
-            Abrir recurso
-            <ArrowUpRight className="h-4 w-4" />
-          </button>
+                <div className="shrink-0 rounded-xl p-2" style={{ background: '#25D366' + '18' }}>
+                  <MessageCircle className="h-3.5 w-3.5" style={{ color: '#25D366' }} />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="text-xs font-semibold text-slate-800">Acceso exclusivo</p>
+                  <p className="mt-0.5 text-xs text-slate-500">
+                    Este recurso está disponible solo por solicitud directa.
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => window.open(`https://wa.me/573153189366?text=${encodeURIComponent('Hola Astrid, me interesa el recurso: ' + resource.title)}`, '_blank', 'noreferrer')}
+                className="flex w-full items-center justify-center gap-2 rounded-2xl px-5 py-3.5 text-sm font-bold shadow-md transition-all duration-200 hover:opacity-90 hover:shadow-lg active:scale-[0.98]"
+                style={{
+                  background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
+                  color: 'white',
+                }}
+              >
+                <MessageCircle className="h-4 w-4" />
+                Solicitar acceso
+                <ArrowUpRight className="h-4 w-4" />
+              </button>
+            </>
+          ) : (
+            <>
+              <div
+                className="flex items-center gap-3 rounded-2xl border p-3"
+                style={{ borderColor: conf.accent + '25', background: conf.accent + '08' }}
+              >
+                <div
+                  className="shrink-0 rounded-xl p-2"
+                  style={{ background: conf.accent + '18' }}
+                >
+                  <LinkIcon className="h-3.5 w-3.5" style={{ color: conf.accent }} />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="text-xs font-semibold text-slate-800">Enlace</p>
+                  <a
+                    href={resource.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-0.5 block truncate text-xs font-medium hover:underline"
+                    style={{ color: conf.accent }}
+                  >
+                    {resource.url}
+                  </a>
+                </div>
+              </div>
+              <button
+                onClick={() => window.open(resource.url, '_blank', 'noreferrer')}
+                className="flex w-full items-center justify-center gap-2 rounded-2xl px-5 py-3.5 text-sm font-bold shadow-md transition-all duration-200 hover:opacity-90 hover:shadow-lg active:scale-[0.98]"
+                style={{
+                  background: 'linear-gradient(135deg, #E8941A 0%, #B8720C 100%)',
+                  color: 'white',
+                }}
+              >
+                <Star className="h-4 w-4" />
+                Abrir recurso
+                <ArrowUpRight className="h-4 w-4" />
+              </button>
+            </>
+          )}
         </div>
       </div>
     </motion.div>
@@ -1120,14 +1163,25 @@ function FeaturedProductCard({ product, index }) {
         </div>
 
         {/* CTA */}
-        <button
-          onClick={() => window.open(product.url, '_blank', 'noreferrer')}
-          className="flex w-full items-center justify-center gap-2 rounded-2xl px-5 py-3.5 text-sm font-bold shadow-sm transition-all duration-200 hover:opacity-90 hover:shadow-md active:scale-[0.98]"
-          style={{ background: product.headerBg, color: '#FFFFFF' }}
-        >
-          Abrir recurso
-          <ArrowUpRight className="h-4 w-4" />
-        </button>
+        {product.contactOnly ? (
+          <button
+            onClick={() => window.open(`https://wa.me/573153189366?text=${encodeURIComponent('Hola Astrid, me interesa: ' + product.title)}`, '_blank', 'noreferrer')}
+            className="flex w-full items-center justify-center gap-2 rounded-2xl px-5 py-3.5 text-sm font-bold shadow-sm transition-all duration-200 hover:opacity-90 hover:shadow-md active:scale-[0.98]"
+            style={{ background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)', color: '#FFFFFF' }}
+          >
+            <MessageCircle className="h-4 w-4" />
+            Solicitar acceso
+          </button>
+        ) : (
+          <button
+            onClick={() => window.open(product.url, '_blank', 'noreferrer')}
+            className="flex w-full items-center justify-center gap-2 rounded-2xl px-5 py-3.5 text-sm font-bold shadow-sm transition-all duration-200 hover:opacity-90 hover:shadow-md active:scale-[0.98]"
+            style={{ background: product.headerBg, color: '#FFFFFF' }}
+          >
+            Abrir recurso
+            <ArrowUpRight className="h-4 w-4" />
+          </button>
+        )}
       </div>
     </motion.div>
   )
@@ -1243,6 +1297,13 @@ export function RepositorioInnovacionIA() {
         toolMatch = r.tool === 'Codex'
       }
 
+      // When both line AND tool filters are active → union (OR)
+      // When only one is active → that filter applies normally
+      const bothActive = activeLine !== 'Todos' && activeTool !== 'Todas'
+      const categoryMatch = bothActive
+        ? (lineMatch || toolMatch)
+        : (lineMatch && toolMatch)
+
       let audienceMatch = true
       if (activeAudience === 'Docentes') {
         audienceMatch = r.audience && r.audience.includes('ocente')
@@ -1258,7 +1319,7 @@ export function RepositorioInnovacionIA() {
         .join(' ')
         .toLowerCase()
 
-      return lineMatch && toolMatch && audienceMatch && (!q || text.includes(q))
+      return categoryMatch && audienceMatch && (!q || text.includes(q))
     })
   }, [activeLine, activeTool, activeAudience, query])
 
