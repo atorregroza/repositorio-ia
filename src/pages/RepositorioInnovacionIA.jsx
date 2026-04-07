@@ -1367,7 +1367,7 @@ export function RepositorioInnovacionIA() {
                     background: '#F0A020',
                   }}
                 >
-                  <Sparkles className="h-3.5 w-3.5" /> Repositorio en construcción
+                  <Sparkles className="h-3.5 w-3.5" /> Portafolio en construcción
                 </motion.span>
 
                 <motion.h1
@@ -1377,7 +1377,7 @@ export function RepositorioInnovacionIA() {
                   className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.5rem]"
                   style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#1c1917' }}
                 >
-                  Repositorio de{' '}
+                  Portafolio de{' '}
                   <span style={{ color: '#1E6B4A' }}>innovación educativa</span>
                   <br />
                   <span style={{ color: '#E8941A' }}>con Inteligencia Artificial</span>
@@ -1394,11 +1394,23 @@ export function RepositorioInnovacionIA() {
                   formación docente, nivelación matemática, currículo y acompañamiento pedagógico.
                 </motion.p>
 
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                  className="mt-4 max-w-xl rounded-xl px-4 py-3 text-xs leading-relaxed"
+                  style={{ background: 'rgba(30,107,74,0.08)', color: '#3d6b5a', border: '1px solid rgba(30,107,74,0.15)' }}
+                >
+                  Todos los recursos de este portafolio fueron creados con apoyo de IA y son mejorables.
+                  Si encuentras un error o una oportunidad de mejora, es parte del proceso.
+                  La mente humana siempre va por encima de la herramienta.
+                </motion.p>
+
                 <motion.div
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.45, duration: 0.4 }}
-                  className="mt-8"
+                  transition={{ delay: 0.5, duration: 0.4 }}
+                  className="mt-6"
                 >
                   <a
                     href="#catalogo"
@@ -1532,7 +1544,7 @@ export function RepositorioInnovacionIA() {
               className="text-xl font-bold"
               style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#1c1917' }}
             >
-              Líneas del repositorio
+              Líneas del portafolio
             </h2>
             <span className="text-sm text-slate-800">4 categorías</span>
           </div>
@@ -1604,7 +1616,7 @@ export function RepositorioInnovacionIA() {
                       className="mt-5 border-l-2 pl-4 text-sm italic text-slate-400"
                       style={{ borderColor: '#E8941A' }}
                     >
-                  &ldquo;Cada herramienta de IA en este repositorio responde a una intención pedagógica real.&rdquo;
+                  &ldquo;Cada herramienta de IA en este portafolio responde a una intención pedagógica real.&rdquo;
                     </blockquote>
 
                     {/* Competencias tecnológicas */}
@@ -2005,7 +2017,7 @@ export function RepositorioInnovacionIA() {
                 Innovación educativa con IA
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-300">
-                Cada recurso de este repositorio nace de una pregunta pedagógica real. Astrid
+                Cada recurso de este portafolio nace de una pregunta pedagógica real. Astrid
                 Torregroza diseña experiencias de aprendizaje que combinan tecnología, creatividad y
                 propósito educativo — convirtiendo la IA en una aliada del aula, no en un sustituto
                 del docente.
@@ -2104,7 +2116,7 @@ export function RepositorioInnovacionIA() {
               ))}
             </div>
             <p className="mt-4 text-center text-xs text-slate-400">
-              Creado por Astrid Torregroza · Repositorio de innovación educativa con IA
+              Creado por Astrid Torregroza · Portafolio de innovación educativa con IA
             </p>
           </div>
         </footer>
