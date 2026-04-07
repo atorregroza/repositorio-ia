@@ -1613,7 +1613,7 @@ export function RepositorioInnovacionIA() {
                     </p>
 
                     <blockquote
-                      className="mt-5 border-l-2 pl-4 text-sm italic text-slate-400"
+                      className="mt-5 border-l-2 pl-4 text-sm italic text-slate-300"
                       style={{ borderColor: '#E8941A' }}
                     >
                   &ldquo;Cada herramienta de IA en este portafolio responde a una intención pedagógica real.&rdquo;
@@ -1621,7 +1621,7 @@ export function RepositorioInnovacionIA() {
 
                     {/* Competencias tecnológicas */}
                     <div className="mt-6">
-                      <p className="mb-2.5 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                      <p className="mb-2.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">
                     Herramientas y competencias tecnológicas
                       </p>
                       <div className="flex flex-wrap gap-2">
@@ -1675,7 +1675,7 @@ export function RepositorioInnovacionIA() {
                           >
                             {value}
                           </p>
-                          <p className="mt-0.5 whitespace-pre-line text-[10px] leading-tight text-slate-500">
+                          <p className="mt-0.5 whitespace-pre-line text-[10px] leading-tight text-slate-400">
                             {label}
                           </p>
                         </div>
@@ -1684,7 +1684,7 @@ export function RepositorioInnovacionIA() {
 
                     {/* Reconocimientos */}
                     <div className="space-y-2.5">
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
                     Reconocimientos
                       </p>
                       {[
@@ -1701,7 +1701,7 @@ export function RepositorioInnovacionIA() {
                           </span>
                           <div>
                             <p className="text-xs font-semibold text-white">{award}</p>
-                            {detail && <p className="text-[10px] text-slate-500">{detail}</p>}
+                            {detail && <p className="text-[10px] text-slate-400">{detail}</p>}
                           </div>
                         </div>
                       ))}
