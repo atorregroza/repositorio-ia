@@ -1270,7 +1270,7 @@ export function RepositorioInnovacionIA() {
     <>
       <style>{fontImport}</style>
       <div
-        className="min-h-screen text-slate-900"
+        className="portfolio-wrapper min-h-screen text-slate-900"
         style={{ background: '#F7F7F4', fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}
       >
 
